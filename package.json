@@ -10,5 +10,14 @@
   "peerDependencies": {
     "react": "^16.9.0 || ^17.0.0",
     "react-dom": "^16.9.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "@koala-live/browser": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
