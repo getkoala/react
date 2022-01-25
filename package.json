@@ -1,0 +1,10 @@
+{
+  "name": "@koala-live/react",
+  "version": "1.0.0",
+  "description": "React hooks for integrating Koala.",
+  "repository": "https://github.com/koala-live/react.git",
+  "license": "MIT",
+  "private": false,
+  "author": "Matthew Shwery <mshwery@gmail.com>",
+  "main": "index.js"
+}
