@@ -7,12 +7,21 @@ export const getKoala = () => {
   return window.ko!;
 };
 
-export const KoalaContext = React.createContext<Koala.KoalaSDK>(window.ko!);
+export interface KoalaContextType {
+  ready: boolean;
+  koala: Koala.KoalaSDK;
+}
+
+export const KoalaContext = React.createContext<KoalaContextType>({
+  ready: false,
+  koala: window.ko!,
+});
 
 export type KoalaProviderProps = React.PropsWithChildren<Koala.Settings>;
 
 export function KoalaProvider({ children, ...settings }: KoalaProviderProps) {
   const [koala, setKoala] = React.useState<Koala.KoalaSDK>(getKoala());
+  const [ready, setReady] = React.useState(false);
 
   React.useEffect(() => {
     let canceled = false;
@@ -38,8 +47,14 @@ export function KoalaProvider({ children, ...settings }: KoalaProviderProps) {
     };
   }, [settings]);
 
+  React.useEffect(() => {
+    koala.ready(() => setReady(true));
+  }, [koala]);
+
+  const state = React.useMemo(() => ({ ready, koala }), [ready, koala]);
+
   return (
-    <KoalaContext.Provider value={koala}>{children}</KoalaContext.Provider>
+    <KoalaContext.Provider value={state}>{children}</KoalaContext.Provider>
   );
 }
 
