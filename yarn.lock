@@ -310,9 +310,9 @@
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@koala-live/browser@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@koala-live/browser/-/browser-1.0.1.tgz#627715a7c2ad202b0ad566490b8b5bc04924a61e"
-  integrity sha512-6DoRVkCk4zFYPzmAxq7BEWJkOELFxEwJHE+33sorfS2ug3dMFxPhTCFwhHME67PZ1qUDXQh3iom0dM3zCCN6aQ==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@koala-live/browser/-/browser-1.1.0.tgz#45d804ce2e423105224d9836bf272409420234f9"
+  integrity sha512-Dy3rnc5VnKvPMKTr8nAPWtcdew+ZTFxzRdA9mjLZkYjL8gmYD0dpW48HeWTWPdVEeo4GcGLDCjyJZo0f3N9xxg==
   dependencies:
     "@daily-co/daily-js" "^0.17.0"
     "@emotion/css" "^11.7.1"
