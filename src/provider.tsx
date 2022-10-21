@@ -1,5 +1,5 @@
+import * as Koala from "@getkoala/browser";
 import * as React from "react";
-import * as Koala from "@koala-live/browser";
 import { setupBufferSnippet } from "./snippet";
 
 export const getKoala = () => {
