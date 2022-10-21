@@ -164,7 +164,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.16.7"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
   integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
@@ -203,17 +203,6 @@
   dependencies:
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
-
-"@daily-co/daily-js@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@daily-co/daily-js/-/daily-js-0.17.0.tgz#292d63986c5602fbc1ea55e059ac9917bd47e20f"
-  integrity sha512-DMZKYnkDcy3fFL6KwnSeSWslmyO7lhX8Vo6S/aG9hveL6p2SSRQ2w9XBUJRTax95c+H1WMcqSBItoSXC/ZuCig==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    bowser "^2.8.1"
-    events "^3.1.0"
-    fast-equals "^1.6.3"
-    lodash "^4.17.15"
 
 "@emotion/babel-plugin@^11.7.1":
   version "11.7.2"
@@ -309,20 +298,19 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@koala-live/browser@^1.0.1":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@koala-live/browser/-/browser-1.1.0.tgz#45d804ce2e423105224d9836bf272409420234f9"
-  integrity sha512-Dy3rnc5VnKvPMKTr8nAPWtcdew+ZTFxzRdA9mjLZkYjL8gmYD0dpW48HeWTWPdVEeo4GcGLDCjyJZo0f3N9xxg==
+"@getkoala/browser@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/browser/-/browser-1.2.0.tgz#d2c036cec07e64ef3ce23b88ab9379c010fe3ae3"
+  integrity sha512-AUadusgzHAA6WKe2RmJBHrGzKb6BVHgUahOzbcgQFU0oH70mJ+Y5NhJdA46Jkp3ZqHYpuxcCxR3yAzxReoNtDw==
   dependencies:
-    "@daily-co/daily-js" "^0.17.0"
     "@emotion/css" "^11.7.1"
     "@emotion/react" "^11.7.1"
     "@emotion/weak-memoize" "^0.2.5"
-    "@koala-live/edge-api-client" "0.5.0"
+    "@getkoala/edge-api-client" "0.7.0"
     "@rails/actioncable" "^7.0.0"
-    balloon-css "^1.2.0"
     body-scroll-lock "^4.0.0-beta.0"
     colord "^2.9.2"
+    form-request-submit-polyfill "^2.0.0"
     js-cookie "^3.0.1"
     linkify-react "^3.0.4"
     linkifyjs "^3.0.4"
@@ -334,22 +322,21 @@
     react-frame-component "5.1.0"
     react-transition-group "^4.4.2"
     react-use "^17.3.2"
-    umbrellajs "^3.2.3"
     use-persisted-state "^0.3.3"
 
-"@koala-live/edge-api-client@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@koala-live/edge-api-client/-/edge-api-client-0.5.0.tgz#2fc276934115b0790b42ecf019d518c256c14f47"
-  integrity sha512-Tzki8JXWrBdRuPLYFIBn4oKkdgj2q48C1pVjb5/IHEWSnOBEEyHFY2Xp8MAH5LGVQ0xb5VWK2cT92jrfnHsC4A==
+"@getkoala/edge-api-client@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/edge-api-client/-/edge-api-client-0.7.0.tgz#f603c83ca5b87a47c83e48270e1ac49b47fa9e5c"
+  integrity sha512-bheNLAX3zUDwZ8OwB2jEIkm5Zj2Rd/Yq/gc2GrbZSD140PQ7/eIwT7zd1aI1i0ruse6zHrgLX2K9io7fRTE8ug==
   dependencies:
-    "@koala-live/js-bloom" "0.1.1"
+    "@getkoala/js-bloom" "0.1.1"
     dayjs "^1.10.7"
     flattie "^1.1.0"
 
-"@koala-live/js-bloom@0.1.1":
+"@getkoala/js-bloom@0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@koala-live/js-bloom/-/js-bloom-0.1.1.tgz#c92b71fc8f6203258d764cfd62ce30fc763c525b"
-  integrity sha512-ihfPeXEulIk/O6L5HCquU0Y+nJUIW1HJDLlck92fafqbDgTzhGP0VgrJw1sYSLTNhn5yoyHwVMFliqyw1pgZ9w==
+  resolved "https://registry.yarnpkg.com/@getkoala/js-bloom/-/js-bloom-0.1.1.tgz#45afbd10695f6c0c28caab744b6ef35143e620bf"
+  integrity sha512-SJVuY1cHwZHJmrl4dYc72pNi1aR8a0HsGJw3cT4ziyV5KXwYy83HcR/YiVX2qer8Z9Ak+rp79zzz9oa22klkLQ==
 
 "@rails/actioncable@^7.0.0":
   version "7.0.1"
@@ -411,20 +398,10 @@ babel-plugin-macros@^2.6.1:
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
 
-balloon-css@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/balloon-css/-/balloon-css-1.2.0.tgz#53d3fb4051264a278a58713bed6865845dbcaf4b"
-  integrity sha512-urXwkHgwp6GsXVF+it01485Z2Cj4pnW02ICnM0TemOlkKmCNnDLmyy+ZZiRXBpwldUXO+aRNr7Hdia4CBvXJ5A==
-
 body-scroll-lock@^4.0.0-beta.0:
   version "4.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-4.0.0-beta.0.tgz#4f78789d10e6388115c0460cd6d7d4dd2bbc4f7e"
   integrity sha512-a7tP5+0Mw3YlUJcGAKUqIBkYYGlYxk2fnCasq/FUph1hadxlTRjF+gAcZksxANnaMnALjxEddmSi/H3OR8ugcQ==
-
-bowser@^2.8.1:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/bowser/-/bowser-2.11.0.tgz#5ca3c35757a7aa5771500c70a73a9f91ef420a8f"
-  integrity sha512-AlcaJBi/pqqJBIQ8U9Mcpc9i8Aqxn88Skv5d+xBX006BY5u8N3mGLHa5Lgppa7L/HfwgwLgZ6NYs+Ag6uUmJRA==
 
 browserslist@^4.17.5:
   version "4.19.1"
@@ -573,20 +550,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-events@^3.1.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
-  integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
-
 fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
-
-fast-equals@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/fast-equals/-/fast-equals-1.6.3.tgz#84839a1ce20627c463e1892f2ae316380c81b459"
-  integrity sha512-4WKW0AL5+WEqO0zWavAfYGY1qwLsBgE//DN4TTcVEN2UlINgkv9b3vm2iHicoenWKSX9mKWmGOsU/iI5IST7pQ==
 
 fast-shallow-equal@^1.0.0:
   version "1.0.0"
@@ -607,6 +574,11 @@ flattie@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/flattie/-/flattie-1.1.0.tgz#1459504209f2001c478751b4e2fb69d6b1ee3241"
   integrity sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==
+
+form-request-submit-polyfill@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/form-request-submit-polyfill/-/form-request-submit-polyfill-2.0.0.tgz#2557c9c2385989954461e327e81619993b5bce96"
+  integrity sha512-p0+M92y2gFnP0AuuL8VJ0GYVzAT0bYp3GsSkmPFhvUopdnfDLP/9xplQTBBc4w8qOjKRzdK7GaFcdL9IhlXdTQ==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -726,7 +698,7 @@ linkifyjs@^3.0.4:
   resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-3.0.5.tgz#99e51a3a0c0e232fcb63ebb89eea3ff923378f34"
   integrity sha512-1Y9XQH65eQKA9p2xtk+zxvnTeQBG7rdAXSkUG97DmuI/Xhji9uaUzaWxRj6rf9YC0v8KKHkxav7tnLX82Sz5Fg==
 
-lodash@^4.17.15, lodash@^4.17.21:
+lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -1056,11 +1028,6 @@ typescript@^4.5.5:
   version "4.5.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
   integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
-
-umbrellajs@^3.2.3:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/umbrellajs/-/umbrellajs-3.3.1.tgz#ffaddef33f0e45b058f523ad82a39728961ff6bb"
-  integrity sha512-3Y4LVTFZWyXdSc7jSiJQziZJ77R2I9YwO5kaKZeHlXfH3clzG0TsHNMQrKNJqKDlWkORN8QEvqrVOKhjVUN6IQ==
 
 use-persisted-state@^0.3.3:
   version "0.3.3"

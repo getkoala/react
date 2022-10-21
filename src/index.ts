@@ -1,5 +1,5 @@
-import type * as Koala from "@koala-live/browser";
-export * from "@koala-live/browser";
+import type * as Koala from "@getkoala/browser";
+export * from "@getkoala/browser";
 export * from "./provider";
 
 declare global {

@@ -1,11 +1,11 @@
 {
-  "name": "@koala-live/react",
+  "name": "@getkoala/react",
   "version": "1.1.0",
   "description": "React hooks for integrating Koala.",
   "repository": "https://github.com/koala-live/react.git",
   "license": "MIT",
   "private": false,
-  "author": "Matthew Shwery <mshwery@gmail.com>",
+  "author": "Matthew Shwery <matt@getkoala.com>",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -24,7 +24,7 @@
     "react": "^16.9.0 || ^17.0.0"
   },
   "dependencies": {
-    "@koala-live/browser": "^1.0.1"
+    "@getkoala/browser": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
