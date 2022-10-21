@@ -1,11 +1,11 @@
-# @koala-live/react
+# @getkoala/react
 
 Koala SDK hooks for React.
 
 ## Install
 
 ```sh
-yarn add @koala-live/react
+yarn add @getkoala/react
 
 # install peer dependencies if not already installed
 yarn add react react-dom
@@ -16,7 +16,7 @@ yarn add react react-dom
 ```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import { KoalaProvider, useKoala } from "@koala-live/react";
+import { KoalaProvider, useKoala } from "@getkoala/react";
 
 function App() {
   // You can start using `koala` immediately, but it will asynchronously
