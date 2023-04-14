@@ -1,9 +1,8 @@
-import * as Koala from "@getkoala/browser";
+import type * as Koala from "@getkoala/browser";
 import * as React from "react";
-import { setupBufferSnippet } from "./snippet";
+import { KoalaProxy } from "./loader";
 
 export const getKoala = () => {
-  setupBufferSnippet();
   return window.ko!;
 };
 
@@ -17,39 +16,37 @@ export const KoalaContext = React.createContext<KoalaContextType>({
   koala: window.ko!,
 });
 
-export type KoalaProviderProps = React.PropsWithChildren<Koala.Settings>;
+export type KoalaProviderProps = React.PropsWithChildren<{
+  publicApiKey?: string;
+}>;
 
 export function KoalaProvider({ children, ...settings }: KoalaProviderProps) {
   const [koala, setKoala] = React.useState<Koala.KoalaSDK>(getKoala());
   const [ready, setReady] = React.useState(false);
 
+  // Init the Koala SDK from the given public API key.
+  // Also set an on ready callback that will set the state of the provider.
   React.useEffect(() => {
     let canceled = false;
 
-    if (!settings.project) {
-      console.error("Koala SDK: Missing required project attribute.");
+    if (!settings.publicApiKey) {
+      console.error("[KOALA]", "Missing required public API key.");
       return;
     }
 
-    Koala.load(settings)
-      .then((ko) => {
-        if (!canceled) {
-          window.ko = ko;
-          setKoala(ko);
-        }
-      })
-      .catch((error) => {
-        console.error("[KOALA]", "Failed to load the Koala SDK.", error);
-      });
+    KoalaProxy.ko.ready(() => {
+      if (!canceled) {
+        setKoala(KoalaProxy.ko);
+        setReady(true);
+      }
+    });
+
+    KoalaProxy.ko.init(settings.publicApiKey);
 
     return () => {
       canceled = true;
     };
-  }, [settings]);
-
-  React.useEffect(() => {
-    koala.ready(() => setReady(true));
-  }, [koala]);
+  }, [settings.publicApiKey]);
 
   const state = React.useMemo(() => ({ ready, koala }), [ready, koala]);
 
