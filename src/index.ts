@@ -1,9 +1,3 @@
-import type * as Koala from "@getkoala/browser";
-export * from "@getkoala/browser";
+import { KoalaProxy } from "./loader";
 export * from "./provider";
-
-declare global {
-  interface Window {
-    ko?: Koala.KoalaSDK;
-  }
-}
+export default KoalaProxy.ko;

@@ -11,7 +11,44 @@ yarn add @getkoala/react
 yarn add react react-dom
 ```
 
-## Usage
+## Recommended Usage
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom";
+import ko from "@getkoala/react";
+
+// Load the Koala SDK immediately
+ko.init("<your Koala public API key>");
+
+function App() {
+  const [ready, setReady] = React.useState(false);
+
+  // Pseudocode to exemplify getting the logged-in user
+  const user = useCurrentUser();
+
+  React.useEffect(() => {
+    if (user) {
+      ko.identify(user.email, { name: user.name });
+    }
+  }, [user]);
+
+  React.useEffect(() => {
+    ko.ready(() => setReady(true));
+  }, []);
+
+  return <div>{ready ? "Ready" : "Loading"}</div>;
+}
+
+ReactDOM.render(
+  <App />
+  document.getElementById("root")
+);
+```
+
+## Alternative usage
+
+You can also use KoalaProvider to load the SDK and the useKoala hook if necessary, though you should be able to do everything you need using the recommended usage instead.
 
 ```tsx
 import React from "react";
@@ -39,7 +76,7 @@ function App() {
 }
 
 ReactDOM.render(
-  <KoalaProvider project="<your Koala project slug>">
+  <KoalaProvider publicApiKey="<your Koala public API key>">
     <App />
   </KoalaProvider>,
   document.getElementById("root")
