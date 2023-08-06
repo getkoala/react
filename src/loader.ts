@@ -20,15 +20,21 @@ const methods = [
   "ready",
 ];
 
-const Koala = isBrowser ? (window.ko = [] as any) : [];
+const koBuffer: any = [];
 
 // immediately create buffered methods
 methods.forEach((method) => {
-  Koala[method] = (...args: unknown[]) => {
+  koBuffer[method] = (...args: unknown[]) => {
     args.unshift(method);
-    Koala.push(args);
+    koBuffer.push(args);
   };
 });
+
+if (isBrowser && !window.ko) {
+  window.ko = koBuffer;
+}
+
+const Koala = isBrowser ? window.ko : koBuffer;
 
 let invoked = false;
 
@@ -66,13 +72,13 @@ function init(publicApiKey: string) {
 // define a getter that proxies the Koala window object
 const KoalaProxy = {
   get ko() {
-    const ko = isBrowser ? window.ko : Koala;
+    const ko: any = isBrowser ? window.ko : Koala;
 
     if (!ko.init) {
       ko.init = init;
     }
 
-    return ko;
+    return ko as KoalaSDK & { init: typeof init };
   },
 };
 
