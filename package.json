@@ -24,7 +24,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@getkoala/browser": "^1.2.0",
     "@types/react": "^17.0.38",
     "prop-types": "^15.8.1",
