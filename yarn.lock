@@ -149,25 +149,23 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.3.0.tgz#ea89004119dc42db2e1dba0f97d553f7372f6fcb"
   integrity sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==
 
-"@getkoala/browser@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@getkoala/browser/-/browser-1.2.0.tgz#d2c036cec07e64ef3ce23b88ab9379c010fe3ae3"
-  integrity sha512-AUadusgzHAA6WKe2RmJBHrGzKb6BVHgUahOzbcgQFU0oH70mJ+Y5NhJdA46Jkp3ZqHYpuxcCxR3yAzxReoNtDw==
+"@getkoala/browser@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/browser/-/browser-1.12.0.tgz#caedffb7d59413f5969ad34ef79433632ae7fe4d"
+  integrity sha512-wAIFZHh3tVRo/ar4UOE4DhQep408SlstQ5WaDIDedyyndE3ZF40B5jVNg+Ii9LKfZW5xzi42Eb/s2J5GcBapYw==
   dependencies:
     "@emotion/css" "^11.7.1"
     "@emotion/react" "^11.7.1"
     "@emotion/weak-memoize" "^0.2.5"
-    "@getkoala/edge-api-client" "0.7.0"
+    "@getkoala/edge-api-client" "0.11.0"
+    "@lukeed/uuid" "^2.0.1"
     "@rails/actioncable" "^7.0.0"
     body-scroll-lock "^4.0.0-beta.0"
     colord "^2.9.2"
+    follow-redirects "^1.15.4"
     form-request-submit-polyfill "^2.0.0"
     js-cookie "^3.0.1"
-    linkify-react "^3.0.4"
-    linkifyjs "^3.0.4"
     lodash "^4.17.21"
-    modern-normalize "^1.1.0"
-    nanoid "^3.1.30"
     react-calendly "^2.2.2"
     react-feather "^2.0.9"
     react-frame-component "5.1.0"
@@ -175,19 +173,30 @@
     react-use "^17.3.2"
     use-persisted-state "^0.3.3"
 
-"@getkoala/edge-api-client@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@getkoala/edge-api-client/-/edge-api-client-0.7.0.tgz#f603c83ca5b87a47c83e48270e1ac49b47fa9e5c"
-  integrity sha512-bheNLAX3zUDwZ8OwB2jEIkm5Zj2Rd/Yq/gc2GrbZSD140PQ7/eIwT7zd1aI1i0ruse6zHrgLX2K9io7fRTE8ug==
+"@getkoala/edge-api-client@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@getkoala/edge-api-client/-/edge-api-client-0.11.0.tgz#ed5d68d6150ebc07085391f571087f528b4adf54"
+  integrity sha512-XW+CJ9XN1xAEIUpvNTQexh63b8tiS7v2eEcOWm/EerKes5QB8KePJo0Fr1ZGxMFMBxC+2aarCB8OYtmeaf/6sA==
   dependencies:
     "@getkoala/js-bloom" "0.1.1"
-    dayjs "^1.10.7"
     flattie "^1.1.0"
 
 "@getkoala/js-bloom@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@getkoala/js-bloom/-/js-bloom-0.1.1.tgz#45afbd10695f6c0c28caab744b6ef35143e620bf"
   integrity sha512-SJVuY1cHwZHJmrl4dYc72pNi1aR8a0HsGJw3cT4ziyV5KXwYy83HcR/YiVX2qer8Z9Ak+rp79zzz9oa22klkLQ==
+
+"@lukeed/csprng@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
+  integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
+
+"@lukeed/uuid@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@lukeed/uuid/-/uuid-2.0.1.tgz#4f6c34259ee0982a455e1797d56ac27bb040fd74"
+  integrity sha512-qC72D4+CDdjGqJvkFMMEAtancHUQ7/d/tAiHf64z8MopFDmcrtbcJuerDtFceuAfQJ2pDSfCKCtbqoGBNnwg0w==
+  dependencies:
+    "@lukeed/csprng" "^1.1.0"
 
 "@rails/actioncable@^7.0.0":
   version "7.0.4"
@@ -328,11 +337,6 @@ csstype@^3.0.2, csstype@^3.0.6:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
-dayjs@^1.10.7:
-  version "1.11.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
-  integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
-
 dom-helpers@^5.0.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
@@ -394,6 +398,11 @@ flattie@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/flattie/-/flattie-1.1.0.tgz#1459504209f2001c478751b4e2fb69d6b1ee3241"
   integrity sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==
+
+follow-redirects@^1.15.4:
+  version "1.15.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
 
 form-request-submit-polyfill@^2.0.0:
   version "2.0.0"
@@ -482,16 +491,6 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-linkify-react@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/linkify-react/-/linkify-react-3.0.4.tgz#5f41ef63efe23eba34d23a091c0054f328323522"
-  integrity sha512-ar/fLlBw4/pbg5BmpH65dSXpGWhts/+BDV8tCdLN8Pd0P/vtHKjaEw9Gf4Za3Utpn5FhWlQyf57SWriPtoBHtw==
-
-linkifyjs@^3.0.4:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-3.0.5.tgz#99e51a3a0c0e232fcb63ebb89eea3ff923378f34"
-  integrity sha512-1Y9XQH65eQKA9p2xtk+zxvnTeQBG7rdAXSkUG97DmuI/Xhji9uaUzaWxRj6rf9YC0v8KKHkxav7tnLX82Sz5Fg==
-
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -509,11 +508,6 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-modern-normalize@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-1.1.0.tgz#da8e80140d9221426bd4f725c6e11283d34f90b7"
-  integrity sha512-2lMlY1Yc1+CUy0gw4H95uNN7vjbpoED7NNRSBHE25nWfLBdmMzFCsPshlzbxHz+gYMcBEUN8V4pU16prcdPSgA==
-
 nano-css@^5.3.1:
   version "5.3.5"
   resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-5.3.5.tgz#3075ea29ffdeb0c7cb6d25edb21d8f7fa8e8fe8e"
@@ -527,11 +521,6 @@ nano-css@^5.3.1:
     sourcemap-codec "^1.4.8"
     stacktrace-js "^2.0.2"
     stylis "^4.0.6"
-
-nanoid@^3.1.30:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
-  integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
 object-assign@^4.1.1:
   version "4.1.1"
