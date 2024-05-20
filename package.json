@@ -1,6 +1,6 @@
 {
   "name": "@getkoala/react",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "React hooks for integrating Koala.",
   "repository": "https://github.com/getkoala/react.git",
   "license": "MIT",
